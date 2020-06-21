@@ -1,0 +1,37 @@
+<div>
+
+    <div class="m-0 mb-3 border-0 p-0">
+
+        <p class="m-0 border-0 p-0">CONTACTS</p>
+
+    </div>
+
+    <div class="m-0 border-0 p-0">
+
+        <ul class="list-group">
+
+            <div *ngFor="let contact of this.ContactsList; let i = index">
+                
+                <div class="HoverColourBlue">
+
+                    <li class="list-group-item Border-Radius-0 Set-Width-500 pt-0" (click)="Redirect(contact.id)">
+
+                        <p class="Font-Size-20 mt-0 mb-0">      {{this.contact.name}}    </p>   
+                        <p class="Font-Size-12 ml-1 mb-0">      {{this.contact.email}}   </p>
+                        <p class="Font-Size-12 mt-0 ml-1 mb-0"> {{this.contact.phoneNumber}}   </p>
+                    
+                    </li>
+
+                </div>
+
+            </div>
+
+        </ul>
+
+    </div>
+
+    <div>
+
+    </div>
+
+</div>

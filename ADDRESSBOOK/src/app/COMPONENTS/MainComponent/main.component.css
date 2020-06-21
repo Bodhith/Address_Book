@@ -1,0 +1,19 @@
+#HeadingBar{
+    font-family: "Century Gothic";
+
+    background: #3399cc;
+}
+
+#headingText{
+    color: #f6fafd;
+    
+    border-color: #3399cc !important;
+}
+
+#OptionsBar{
+    font-family: "Noto Sans";
+}
+
+#OptionsBar a{
+    color: #ffffff !important;
+}

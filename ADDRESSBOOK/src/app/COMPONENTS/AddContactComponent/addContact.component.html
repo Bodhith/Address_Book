@@ -1,0 +1,75 @@
+<div class="row m-auto">
+
+    <div class="col m-0 mt-4 ml-4">
+
+        <contactsList></contactsList>
+
+    </div>
+    
+    <div class="col m-0 mt-4">
+
+        <form [formGroup]="AddContactForm" (ngSubmit)="AddContactFormSubmit()">
+
+            <label for="nameInput">Name</label>
+
+            <br>
+
+            <input class="Set-Width-500" formControlName="nameInput" id="nameInput">
+
+            <div *ngFor="let error of NameInputErrors | keyvalue">
+
+                <div *ngIf="this.AddContactForm.get('nameInput').hasError(error.key) && this.AddContactForm.get('nameInput').touched">{{error.value}}</div>
+                
+            </div>
+
+            <br>
+
+            <label for="emailInput">Email</label>
+
+            <br>
+
+            <input class="Set-Width-500" class="Set-Width-500" formControlName="emailInput" id="emailInput">
+
+            <div *ngFor="let error of EmailInputErrors | keyvalue">
+
+                <div *ngIf="this.AddContactForm.get('emailInput').hasError(error.key) && this.AddContactForm.get('emailInput').touched">{{error.value}}</div>
+                
+            </div>
+
+            <br>
+
+            <label for="phoneInput">Phone</label>
+
+            <br>
+
+            <input class="Set-Width-500" formControlName="phoneInput" id="phoneInput">
+
+            <div *ngFor="let error of PhoneInputErrors | keyvalue">
+
+                <div *ngIf="this.AddContactForm.get('phoneInput').hasError(error.key) && this.AddContactForm.get('phoneInput').touched">{{error.value}}</div>
+                
+            </div>
+
+            <br>
+
+            <label for="addressInput">Address</label>
+
+            <br>
+
+            <input class="Set-Width-500" formControlName="addressInput" id="phoneInput">
+
+            <div *ngFor="let error of AddressInputErrors | keyvalue">
+
+                <div *ngIf="this.AddContactForm.get('addressInput').hasError(error.key) && this.AddContactForm.get('addressInput').touched">{{error.value}}</div>
+                
+            </div>
+
+            <br><br>
+
+            <button class="float-right mr-5 pl-5 pr-5" type="submit">Add</button>
+
+        </form>
+
+    </div>
+
+</div>
